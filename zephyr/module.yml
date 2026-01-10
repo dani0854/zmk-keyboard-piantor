@@ -1,5 +1,7 @@
 name: zmk-keyboard-piantor
 
 build:
+  depends:
+    - zmk-component-weact-studio-rp2040
   settings:
     board_root: .

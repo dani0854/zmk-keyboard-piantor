@@ -2,12 +2,16 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    # Additional modules containing boards/shields/custom code can be listed here as well
-    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
+    - name: dani0854
+      url-base: https://github.com/dani0854
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: v0.3
       import: app/west.yml
+    - name: zmk-component-weact-studio-rp2040
+      remote: dani0854
+      revision: main
+      import: west.yml
   self:
     path: config
